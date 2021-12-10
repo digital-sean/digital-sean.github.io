@@ -188,7 +188,7 @@ body {
   border-top: 2px solid;
   border-right: 2px solid;
   transform: rotate(45deg);
-  color: #5BC0BE;
+  color: var(--accent);
 }
 
 .work-item {
@@ -251,8 +251,6 @@ body {
   }
 
 }
-
-
 
 @media screen and (max-width: 500px) {
   #about {
