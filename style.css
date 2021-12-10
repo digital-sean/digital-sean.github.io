@@ -1,24 +1,16 @@
+:root {
+  --main-bg: #fff6f2;
+  --text-lg: #050594;
+  --text-copy: #202020;
+  --accent: #ff4747;
+}
 
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background-color: #0a0903;
+  background-color: var(--main-bg);
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  position: fixed;
-  width: 100%;
-  background-color: rgba(255,255,255,.5);
-  border-bottom: 3px solid #faba9c;
-  z-index: 4;
-  padding: 1% 0;
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-}
 
 .arrows {
   width: 100%;
@@ -35,7 +27,7 @@ header {
   border-bottom: 2px solid;
   width: 15px;
   height: 15px;
-  color: #5BC0BE;
+  color: var(--text-lg);
   transform: rotate(-45deg);
 }
 #down2 {
@@ -43,59 +35,26 @@ header {
   border-bottom: 2px solid;
   width: 15px;
   height: 15px;
-  color: #FF4747;
+  color: var(--accent);
   transform: rotate(-45deg);
   margin: auto 10px;
-  
+
 }
 #down3 {
   border-left: 2px solid;
   border-bottom: 2px solid;
   width: 15px;
   height: 15px;
-  color: #F5F0F6;
+  color: var(--text-lg);
   transform: rotate(-45deg);
- 
+
 }
 
-nav {
-  margin-right: 1%;
-}
-
-.nav-name {
-  margin-left: 1%;
-}
-
-.nav-name h1 {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  font-weight: 900;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  min-width: 200px;
-}
-
-nav ul li a {
-  font-family: "Montserrat", sans-serif;
-  color: #000;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  color: #faba9c;
-  text-decoration: line-through;
-}
 
 .name {
-  font-family: 'Montserrat', sans-serif;
+  font-family: pragmatica-extended, sans-serif;
   font-size: 5rem;
-  color: #FF4747;
+  color: var(--text-lg);
   font-weight: 900;
   margin-bottom: -20px;
   margin-top: -10px;
@@ -128,6 +87,7 @@ nav ul li a:hover {
 
 .about-text {
   width: 68%;
+  color: var(--text-copy);
 }
 
 .container {
@@ -137,7 +97,7 @@ nav ul li a:hover {
   scroll-behavior: smooth;
   overflow: auto;
   scroll-snap-type: y mandatory;
-  color: #F5F0F6;
+  color: var(--text-lg);
 }
 
 .section {
@@ -183,28 +143,21 @@ nav ul li a:hover {
 
 #contact ul li a {
   width: 100%;
-  border: 1px solid #5BC0BE;
-  color: #ff4747;
+  border: 1px solid var(--text-lg);
+  color: var(--text-lg);
   text-decoration: none;
   text-align: center;
   padding: 15px 0;
 }
 
 #contact ul li a:hover {
-  border-color: #faba9c;
-  color: #faba9c;
-  text-decoration: line-through;
+  border-color: var(--accent);
+  color: var(--accent);
+  font-style: italic;
 }
 
 .nav-toggle, .mobile-nav {
   display: none;
-}
-
-.nav-toggle div {
-  background-color: #000;
-  height: 4px;
-  width: 25px;
-  margin-bottom: 4px;
 }
 
 #work .title {
@@ -213,25 +166,9 @@ nav ul li a:hover {
 }
 
 .title {
-  color: #FF4747;
+  color: var(--accent);
   font-size: 2rem;
-}
-
-.work-page .desk-tab-nav a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  color: #404040;
-  text-decoration: none;
-}
-
-.back {
-  border-left: 3px solid;
-  border-bottom: 3px solid;
-  height: 10px;
-  width: 10px;
-  transform: rotate(45deg);
+  font-family: pragmatica-extended, sans-serif;
 }
 
 #work-piece {
@@ -240,57 +177,6 @@ nav ul li a:hover {
   width: 70vw;
   margin: auto;
   padding-top: 20vh;
-}
-
-.piece-meta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row-reverse;
-  margin-bottom: 100px;
-}
-
-.piece-meta div {
-  background-color: #fff;
-  border: 3px solid;
-  padding: 2%;
-  margin-left: -50px;
-  z-index: 3;
-}
-
-.piece-meta div h3 {
-  font-weight: 200;
-}
-
-.piece-meta img {
-  width: 50%;
-}
-
-.piece-body p {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-}
-
-.piece-body p:first-child::first-letter {
-  color: #faba9c;
-  font-size: 4rem;
-  font-weight: 900;
-  line-height: 1.1;
-  float: left;
-  border: 3px solid #404040;
-  padding: 0% 2%;
-  margin-right: 5px;
-}
-
-.piece-body-image {
-  width: 70%;
-  margin:  60px auto;
-}
-
-.piece-body-image img {
-  width: 100%;
 }
 
 .more-arrow {
@@ -315,20 +201,29 @@ nav ul li a:hover {
   justify-content: flex-start;
   flex-direction: row;
   margin-bottom: 20px;
-  color: #ff4747;
+  color: var(--accent);
   text-decoration: none;
 }
 
 .work-item > div {
   width: 90%;
   border: 2px solid;
-  background-color: #0A0903;
+  background-color: var(--main-bg);
 }
 
 .work-item > div > * {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.work-item > div h3 {
+  font-family: pragmatica-extended, sans-serif;
+}
+
+.work-item > div p {
+  color: var(--text-copy);
+
 }
 
 @media screen and (min-width: 767px) {
@@ -351,7 +246,7 @@ nav ul li a:hover {
   .about-module {
     width: 80%;
   }
- 
+
 }
 
 
@@ -373,44 +268,7 @@ nav ul li a:hover {
     text-align: center;
     margin-bottom: 25px;
   }
-  .desk-tab-nav {
-    display: none;
-  }
-  .nav-toggle {
-    display: block;
-    padding-right: 10px;
-  }
-  .nav-name {
-    padding-left: 7px;
-  }
-  .mobile-nav {
-    display: flex;
-    position: fixed;
-    right: -100%;
-    height: 100vh;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #faba9c;
-    transition-duration: .5s;
-  }
 
-  .open {right:0;}
-  .bo {background-color: rgba(0,0,0,0);
-  backdrop-filter:blur(0);}
-
-  .mobile-nav nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-left: 0;
-  }
-  .mobile-nav nav ul li {
-    font-size: 2rem;
-    margin-bottom: 50px;
-  }
   .work-row {
     flex-direction: column;
     width: 100%;
@@ -442,24 +300,7 @@ nav ul li a:hover {
     padding-top: 70px;
     width: 100%;
   }
-  .piece-meta {
-    flex-direction: column;
-  }
-  .piece-meta img {
-    width: 100%;
-  }
-  .piece-meta div {
-    width: 90%;
-    margin: 0;
-    text-align: center;
-    border: none;
-  }
-  .piece-body p {
-    width: 90%;
-  }
-  .piece-body-image {
-    width: 100%;
-  }
+
   .work-item img {
     width: 100%;
     max-width: 100%;
