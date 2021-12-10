@@ -53,12 +53,15 @@ body {
 
 .name {
   font-family: pragmatica-extended, sans-serif;
-  font-size: 5rem;
+  font-size: 4.7rem;
   color: var(--text-lg);
   font-weight: 900;
   margin-bottom: -20px;
   margin-top: -10px;
+}
 
+.name span {
+  font-size: 0.8rem;
 }
 
 
@@ -78,7 +81,7 @@ body {
 }
 
 .about-img {
-  width: 30%;
+  width: 35%;
 }
 
 .about-img img {
@@ -252,6 +255,9 @@ body {
 
 
 @media screen and (max-width: 500px) {
+  #about {
+    align-items: center;
+  }
   .about-module {
     width: 95%;
     flex-direction: column-reverse;
