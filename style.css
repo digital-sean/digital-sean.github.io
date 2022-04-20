@@ -53,11 +53,12 @@ body {
 
 .name {
   font-family: pragmatica-extended, sans-serif;
-  font-size: 4.7rem;
+  font-size: 4rem;
   color: var(--text-lg);
   font-weight: 900;
   margin-bottom: -20px;
   margin-top: -10px;
+  line-height: 1;
 }
 
 .name span {
@@ -343,6 +344,25 @@ ul li a, .blog-content p a {
   text-decoration: none;
 }
 
+@media screen and (max-width: 1500px) {
+  .name {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .about-module {
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  .name {
+    font-size: 2.5rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #project-meta {
     left: 5%;
@@ -381,19 +401,6 @@ ul li a, .blog-content p a {
   #about {
     align-items: center;
   }
-}
-
-@media screen and (max-width: 1500px) {
-  .name {
-    font-size: 4.1rem;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .about-module {
-    width: 80%;
-  }
-
 }
 
 @media screen and (max-width: 500px) {
